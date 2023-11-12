@@ -31,14 +31,14 @@ class TestBattery(unittest.TestCase):
         self.assertTrue(car.needs_service())
 
     def spindler_not_need_1(self):
-        current, last = '09-19-2022', '10-10-2020'
+        current, last = '09-19-2023', '10-10-2020'
         date_current = datetime.strptime(current, '%m-%d-%Y').date()
         date_last = datetime.strptime(last, '%m-%d-%Y').date()
         car = NubbinBattery(date_last, date_current)
         self.assertFalse(car.needs_service())
 
     def spindler_need_1(self):
-        current, last = '09-19-2023', '10-10-2020'
+        current, last = '09-19-2024', '10-10-2020'
         date_current = datetime.strptime(current, '%m-%d-%Y').date()
         date_last = datetime.strptime(last, '%m-%d-%Y').date()
         car = NubbinBattery(date_last, date_current)
